@@ -1,0 +1,95 @@
+Meterian Client v1.2.25.5, build f50bdc7-933
+© 2017-2022 Meterian Ltd - All rights reserved
+
+System information:
+- working on folder: /tmp/java-example
+- running locally:   yes
+- interactive mode:  on
+- autofix mode:      on
+
+Checking folder...
+Folder /tmp/java-example contains a viable project!
+
+Authorizing the client...
+Client successfully authorized
+
+Loading build status...
+No build running found!
+
+Requesting build...
+Build allowed
+
+Account: "Meterian Team Account"
+- Minimum scores:  
+  - security:  95
+  - stability: 95
+  - licensing: 95
+- Analysis scopes:  
+  - security:  all components
+  - stability: all components
+  - licensing: all components
+
+Project information:
+- url:    tmp/java-example
+- branch: master
+- commit: 69b14e0ebfa942bc27564bf67d57d2035e31601c
+
+Java scan - running maven locally...
+- maven: loading dependency tree...
+- maven: dependencies generated...
+Execution successful!
+
+Uploading dependencies information - 5 found...
+Done!
+
+Starting build...
+Current build status: initialized
+Current build status: in preparation
+Current build status: process advices at 2023-03-02T08:53:57.006
+
+Autofix requested - current scores:
+- security:	0	(minimum: 95)
+- stability:	99	(minimum: 95)
+- licensing:	100	(minimum: 95)
+
+
+Running autofix, 1 programs
+(program 1)
+- reach:     will update vulnerable libraries only (vulns)
+- strategy:  will update with patch releases (safe)
+- override:  will not override packages
+- variables: will not touch variables
+
+Changes applied: 1
+- dependency mysql:mysql-connector-java version 8.0.16 was upgraded to 8.0.32 (security)
+Autofix applied, will run the build again.
+Build allowed
+
+Project information:
+- url:    tmp/java-example
+- branch: master
+
+Java scan - running maven locally...
+- maven: loading dependency tree...
+- maven: dependencies generated...
+Execution successful!
+
+Uploading dependencies information - 5 found...
+Done!
+
+Starting build...
+Current build status: initialized
+Current build status: in preparation
+Current build status: process advices at 2023-03-02T08:54:03.195
+
+Final results: 
+- security:	0	(minimum: 95)
+- stability:	99	(minimum: 95)
+- licensing:	100	(minimum: 95)
+
+Full report available at: 
+https://qa.meterian.com/projects/?pid=7cd0fcf4-f40f-4143-bc91-3b14aa21e642&branch=master&mode=eli
+
+Build unsuccessful!
+Failed checks: [security]
+

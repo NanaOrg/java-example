@@ -1,0 +1,2306 @@
+{
+  "url": "https://qa.meterian.com/projects/?pid\u003d7cd0fcf4-f40f-4143-bc91-3b14aa21e642\u0026branch\u003dmaster\u0026mode\u003deli",
+  "name": "tmp/java-example",
+  "timestamp": "2023-03-02 08:53:56",
+  "scores": {
+    "stability": "99",
+    "security": "0",
+    "licensing": "100"
+  },
+  "reports": {
+    "security": {
+      "score": 0,
+      "reports": [
+        {
+          "language": "java",
+          "reports": [
+            {
+              "dependency": {
+                "name": "ch.qos.logback:logback-core",
+                "version": "1.1.11",
+                "dependencies": [],
+                "locations": []
+              },
+              "advices": [
+                {
+                  "id": "a5d8125e-3827-11e7-a919-92ebcb67fe33",
+                  "library": {
+                    "name": "ch.qos.logback:logback-core",
+                    "language": "java"
+                  },
+                  "description": " QOS.ch Logback before 1.2.0 has a serialization vulnerability affecting the SocketServer and ServerSocketReceiver components.",
+                  "severity": "CRITICAL",
+                  "links": [
+                    {
+                      "type": "ANNOUNCE",
+                      "url": "https://logback.qos.ch/news.html"
+                    },
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2017-5929"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 9.8,
+                  "versionRange": "[1.0,1.2.0)",
+                  "cve": "CVE-2017-5929",
+                  "cwe": "CWE-502",
+                  "epss": 0.82824
+                },
+                {
+                  "id": "1036deff-f135-c380-c19a-e8bdbe498ef9",
+                  "library": {
+                    "name": "ch.qos.logback:logback-core",
+                    "language": "java"
+                  },
+                  "description": "In logback version 1.2.9 and prior versions, an attacker with the required privileges to edit configurations files could craft a malicious configuration allowing to execute arbitrary code loaded from LDAP servers.",
+                  "severity": "MEDIUM",
+                  "links": [
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-42550"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://github.com/cn-panda/logbackRceDemo"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://jira.qos.ch/browse/LOGBACK-1591"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://logback.qos.ch/news.html"
+                    },
+                    {
+                      "type": "FIX",
+                      "url": "https://github.com/qos-ch/logback/commit/87291079a1de9369ac67e20dc70a8fdc7cc4359c"
+                    },
+                    {
+                      "type": "FIX",
+                      "url": "https://github.com/qos-ch/logback/commit/ef4fc4186b74b45ce80d86833820106ff27edd42"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://github.com/qos-ch/logback/blob/1502cba4c1dfd135b2e715bc0cf80c0045d4d128/logback-site/src/site/pages/news.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20211229-0001/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://github.com/advisories/GHSA-668q-qrv7-99fm"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://gitlab.com/gitlab-org/advisories-community/-/blob/main/maven/ch.qos.logback/logback-core/CVE-2021-42550.yml"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://seclists.org/fulldisclosure/2022/Jul/11"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://packetstormsecurity.com/files/167794/Open-Xchange-App-Suite-7.10.x-Cross-Site-Scripting-Command-Injection.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-371761.pdf"
+                    },
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-42550"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 6.6,
+                  "versionRange": "(,1.2.9)",
+                  "cve": "CVE-2021-42550",
+                  "cwe": "CWE-502",
+                  "epss": 0.41649
+                }
+              ],
+              "hierarchy": [
+                "com.meterian.qa.samples:java-sample-failing:1.0",
+                "ch.qos.logback:logback-core:1.1.11"
+              ],
+              "locations": [],
+              "safeVersions": {
+                "latestMinor": "1.4.5"
+              },
+              "transitive": false
+            },
+            {
+              "dependency": {
+                "name": "com.google.protobuf:protobuf-java",
+                "version": "3.6.1",
+                "dependencies": [],
+                "locations": []
+              },
+              "advices": [
+                {
+                  "id": "1c66ac3f-511d-30f7-8b9e-96b8b76a3ecf",
+                  "library": {
+                    "name": "com.google.protobuf:protobuf-java",
+                    "language": "java"
+                  },
+                  "description": "A parsing issue with binary data in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.",
+                  "severity": "HIGH",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2022-3171"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2022-3171"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://github.com/protocolbuffers/protobuf/security/advisories/GHSA-h4h5-3hr4-j3g2"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CBAUKJQL6O4TIWYBENORSY5P43TVB4M3/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.gentoo.org/glsa/202301-09"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 7.5,
+                  "versionRange": "[,3.16.3)|[3.21.0,3.21.7)|[3.20.0,3.20.3)|[3.17.0,3.19.6)",
+                  "cve": "CVE-2022-3171",
+                  "epss": 0.36327
+                },
+                {
+                  "id": "5abcd56d-8abf-301c-89e5-daf03ed79c23",
+                  "library": {
+                    "name": "com.google.protobuf:protobuf-java",
+                    "language": "java"
+                  },
+                  "description": "A parsing issue similar to CVE-2022-3171, but with textformat in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.",
+                  "severity": "HIGH",
+                  "links": [
+                    {
+                      "type": "NVD",
+                      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3509"
+                    },
+                    {
+                      "type": "FIX",
+                      "url": "https://github.com/protocolbuffers/protobuf/commit/a3888f53317a8018e7a439bac4abeb8f3425d5e9"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://github.com/advisories/GHSA-g5ww-5jh7-63cx"
+                    },
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2022-3509"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 7.5,
+                  "versionRange": "[,3.16.3)|[3.17.0,3.19.6)|[3.20.0,3.20.3)|[3.21.0,3.21.7)",
+                  "cve": "CVE-2022-3509",
+                  "epss": 0.2788
+                },
+                {
+                  "id": "e57802a4-d1a1-3e52-84dc-a7d21b45207f",
+                  "library": {
+                    "name": "com.google.protobuf:protobuf-java",
+                    "language": "java"
+                  },
+                  "description": "An issue in protobuf-java allowed the interleaving of com.google.protobuf.UnknownFieldSet fields in such a way that would be processed out of order. A small malicious payload can occupy the parser for several minutes by creating large numbers of short-lived objects that cause frequent, repeated pauses. We recommend upgrading libraries beyond the vulnerable versions.",
+                  "severity": "MEDIUM",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-22569"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-22569"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://bugs.chromium.org/p/oss-fuzz/issues/detail?id\u003d39330"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://cloud.google.com/support/bulletins#gcp-2022-001"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2022/01/12/4"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2022/01/12/7"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 5.5,
+                  "versionRange": "[,3.16.1)|[3.18.0,3.18.2)|[3.19.0,3.19.2)",
+                  "cve": "CVE-2021-22569",
+                  "epss": 0.4065
+                },
+                {
+                  "id": "a21b12a9-a92d-3769-a91f-32fa555994e6",
+                  "library": {
+                    "name": "com.google.protobuf:protobuf-java",
+                    "language": "java"
+                  },
+                  "description": "A parsing issue similar to CVE-2022-3171, but with Message-Type Extensions in protobuf-java core and lite versions prior to 3.21.7, 3.20.3, 3.19.6 and 3.16.3 can lead to a denial of service attack. Inputs containing multiple instances of non-repeated embedded messages with repeated or unknown fields causes objects to be converted back-n-forth between mutable and immutable forms, resulting in potentially long garbage collection pauses. We recommend updating to the versions mentioned above.",
+                  "severity": "HIGH",
+                  "links": [
+                    {
+                      "type": "NVD",
+                      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-3510"
+                    },
+                    {
+                      "type": "FIX",
+                      "url": "https://github.com/protocolbuffers/protobuf/commit/db7c17803320525722f45c1d26fc08bc41d1bf48"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://github.com/advisories/GHSA-4gg5-vx3j-xwc7"
+                    },
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2022-3510"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 7.5,
+                  "versionRange": "[,3.16.3)|[3.17.0,3.19.6)|[3.20.0,3.20.3)|[3.21.0,3.21.7)",
+                  "cve": "CVE-2022-3510",
+                  "epss": 0.2788
+                }
+              ],
+              "hierarchy": [
+                "com.meterian.qa.samples:java-sample-failing:1.0",
+                "mysql:mysql-connector-java:8.0.16",
+                "com.google.protobuf:protobuf-java:3.6.1"
+              ],
+              "locations": [],
+              "safeVersions": {
+                "latestMinor": "3.22.0",
+                "latestMajor": "4.0.0-rc-2"
+              },
+              "transitive": true
+            },
+            {
+              "dependency": {
+                "name": "mysql:mysql-connector-java",
+                "version": "8.0.16",
+                "dependencies": [],
+                "locations": []
+              },
+              "advices": [
+                {
+                  "id": "94cf2188-4ce0-36ad-98aa-3e5b2f9f5424",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "Node.js \u003c 12.22.9, \u003c 14.18.3, \u003c 16.13.2, and \u003c 17.3.1 converts SANs (Subject Alternative Names) to a string format. It uses this string to check peer certificates against hostnames when validating connections. The string format was subject to an injection vulnerability when name constraints were used within a certificate chain, allowing the bypass of these name constraints.Versions of Node.js with the fix for this escape SANs containing the problematic characters in order to prevent the injection. This behavior can be reverted through the --security-revert command-line option.",
+                  "severity": "MEDIUM",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-44532"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-44532"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://hackerone.com/reports/1429694"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://nodejs.org/en/blog/vulnerability/jan-2022-security-releases/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20220325-0007/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.debian.org/security/2022/dsa-5170"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 5.3,
+                  "versionRange": "[,8.0.28]",
+                  "cve": "CVE-2021-44532",
+                  "cwe": "CWE-295",
+                  "epss": 0.55149
+                },
+                {
+                  "id": "f15cea56-133b-3996-8390-3e45635a0188",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "Server or client applications that call the SSL_check_chain() function during or after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a result of incorrect handling of the \"signature_algorithms_cert\" TLS extension. The crash occurs if an invalid or unrecognised signature algorithm is received from the peer. This could be exploited by a malicious peer in a Denial of Service attack. OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue. This issue did not affect OpenSSL versions prior to 1.1.1d. Fixed in OpenSSL 1.1.1g (Affected 1.1.1d-1.1.1f).",
+                  "severity": "HIGH",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2020-1967"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2020-1967"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003deb563247aef3e83dda7679c43f9649270462e5b1"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.openssl.org/news/secadv/20200421.txt"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-20:11.openssl.asc"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.debian.org/security/2020/dsa-4661"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2020/04/22/2"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.apache.org/thread.html/r9a41e304992ce6aec6585a87842b4f2e692604f5c892c37e3b0587ee@%3Cdev.tomcat.apache.org%3E"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.apache.org/thread.html/r66ea9c436da150683432db5fbc8beb8ae01886c6459ac30c2cea7345@%3Cdev.tomcat.apache.org%3E"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44440"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.apache.org/thread.html/r94d6ac3f010a38fccf4f432b12180a13fa1cf303559bd805648c9064@%3Cdev.tomcat.apache.org%3E"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.gentoo.org/glsa/202004-10"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20200424-0003/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.synology.com/security/advisory/Synology_SA_20_05_OpenSSL"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XVEP3LAK4JSPRXFO4QF4GG2IVXADV3SO/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2020-03"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DDHOAATPWJCXRNFMJ2SASDBBNU5RJONY/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://github.com/irsl/CVE-2020-1967"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://seclists.org/fulldisclosure/2020/May/5"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://packetstormsecurity.com/files/157527/OpenSSL-signature_algorithms_cert-Denial-Of-Service.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/EXDDAOWSAIEFQNBHWYE6PPYFV4QXGMCD/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.synology.com/security/advisory/Synology_SA_20_05"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2020-04"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00004.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00011.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20200717-0004/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuoct2020.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2020-11"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujan2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-10"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 7.5,
+                  "versionRange": "[,8.0.20]",
+                  "cve": "CVE-2020-1967",
+                  "cwe": "CWE-476",
+                  "epss": 0.97825
+                },
+                {
+                  "id": "fa301494-0e3d-3b5d-b8a9-bfc800243702",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "ASN.1 strings are represented internally within OpenSSL as an ASN1_STRING structure which contains a buffer holding the string data and a field holding the buffer length. This contrasts with normal C strings which are repesented as a buffer for the string data which is terminated with a NUL (0) byte. Although not a strict requirement, ASN.1 strings that are parsed using OpenSSL\u0027s own \"d2i\" functions (and other similar parsing functions) as well as any string whose value has been set with the ASN1_STRING_set() function will additionally NUL terminate the byte array in the ASN1_STRING structure. However, it is possible for applications to directly construct valid ASN1_STRING structures which do not NUL terminate the byte array by directly setting the \"data\" and \"length\" fields in the ASN1_STRING array. This can also happen by using the ASN1_STRING_set0() function. Numerous OpenSSL functions that print ASN.1 data have been found to assume that the ASN1_STRING byte array will be NUL terminated, even though this is not guaranteed for strings that have been directly constructed. Where an application requests an ASN.1 structure to be printed, and where that ASN.1 structure contains ASN1_STRINGs that have been directly constructed by the application without NUL terminating the \"data\" field, then a read buffer overrun can occur. The same thing can also occur during name constraints processing of certificates (for example if a certificate has been directly constructed by the application instead of loading it via the OpenSSL parsing functions, and the certificate contains non NUL terminated ASN1_STRING structures). It can also occur in the X509_get1_email(), X509_REQ_get1_email() and X509_get1_ocsp() functions. If a malicious actor can cause an application to directly construct an ASN1_STRING and then process it through one of the affected OpenSSL functions then this issue could be hit. This might result in a crash (causing a Denial of Service attack). It could also result in the disclosure of private memory contents (such as private keys, or sensitive plaintext). Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k). Fixed in OpenSSL 1.0.2za (Affected 1.0.2-1.0.2y).",
+                  "severity": "HIGH",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-3712"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-3712"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.openssl.org/news/secadv/20210824.txt"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003d94d23fcff9b2a7a8368dfe52214d5c2569882c11"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003dccb0a11145ee72b042d10593a64eaf9e8a55ec12"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.debian.org/security/2021/dsa-4963"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.apache.org/thread.html/r18995de860f0e63635f3008fd2a6aca82394249476d21691e7c59c9e@%3Cdev.tomcat.apache.org%3E"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/08/26/2"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.apache.org/thread.html/rad5d9f83f0d11fb3f8bb148d179b8a9ad7c6a17f18d70e5805a713d1@%3Cdev.tomcat.apache.org%3E"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20210827-0010/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-16"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.debian.org/debian-lts-announce/2021/09/msg00014.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.debian.org/debian-lts-announce/2021/09/msg00021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://kc.mcafee.com/corporate/index?page\u003dcontent\u0026id\u003dSB10366"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2022-02"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-244969.pdf"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.gentoo.org/glsa/202209-02"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.gentoo.org/glsa/202210-02"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 7.4,
+                  "versionRange": "[,8.0.27]",
+                  "cve": "CVE-2021-3712",
+                  "cwe": "CWE-125",
+                  "epss": 0.89215
+                },
+                {
+                  "id": "9817fe76-c8b0-3dbe-b5ca-890558ae3d1d",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "Node.js \u003c 12.22.9, \u003c 14.18.3, \u003c 16.13.2, and \u003c 17.3.1 did not handle multi-value Relative Distinguished Names correctly. Attackers could craft certificate subjects containing a single-value Relative Distinguished Name that would be interpreted as a multi-value Relative Distinguished Name, for example, in order to inject a Common Name that would allow bypassing the certificate subject verification.Affected versions of Node.js that do not accept multi-value Relative Distinguished Names and are thus not vulnerable to such attacks themselves. However, third-party code that uses node\u0027s ambiguous presentation of certificate subjects may be vulnerable.",
+                  "severity": "MEDIUM",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-44533"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-44533"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://hackerone.com/reports/1429694"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://nodejs.org/en/blog/vulnerability/jan-2022-security-releases/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20220325-0007/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.debian.org/security/2022/dsa-5170"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 5.3,
+                  "versionRange": "[,8.0.28]",
+                  "cve": "CVE-2021-44533",
+                  "cwe": "CWE-295",
+                  "epss": 0.55149
+                },
+                {
+                  "id": "d11cae92-ad02-4849-a55b-cae17c37400f",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "Vulnerability in the MySQL Connectors product of Oracle MySQL (component: Connector/J). Supported versions that are affected are 8.0.27 and prior. Difficult to exploit vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Connectors. Successful attacks of this vulnerability can result in takeover of MySQL Connectors. CVSS 3.1 Base Score 6.6 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H).\n",
+                  "severity": "MEDIUM",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2022-21363"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 6.6,
+                  "versionRange": "[,8.0.28)",
+                  "cve": "CVE-2022-21363",
+                  "cwe": "CWE-285",
+                  "epss": 0.2788
+                },
+                {
+                  "id": "bac2c08a-fe25-38e4-b941-3c641594f35f",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "In order to decrypt SM2 encrypted data an application is expected to call the API function EVP_PKEY_decrypt(). Typically an application will call this function twice. The first time, on entry, the \"out\" parameter can be NULL and, on exit, the \"outlen\" parameter is populated with the buffer size required to hold the decrypted plaintext. The application can then allocate a sufficiently sized buffer and call EVP_PKEY_decrypt() again, but this time passing a non-NULL value for the \"out\" parameter. A bug in the implementation of the SM2 decryption code means that the calculation of the buffer size required to hold the plaintext returned by the first call to EVP_PKEY_decrypt() can be smaller than the actual size required by the second call. This can lead to a buffer overflow when EVP_PKEY_decrypt() is called by the application a second time with a buffer that is too small. A malicious attacker who is able present SM2 content for decryption to an application could cause attacker chosen data to overflow the buffer by up to a maximum of 62 bytes altering the contents of other data held after the buffer, possibly changing application behaviour or causing the application to crash. The location of the buffer is application dependent but is typically heap allocated. Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k).",
+                  "severity": "CRITICAL",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-3711"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-3711"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.openssl.org/news/secadv/20210824.txt"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003d59f5e75f3bced8fc0e130d72a3f582cf7b480b46"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.debian.org/security/2021/dsa-4963"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.apache.org/thread.html/r18995de860f0e63635f3008fd2a6aca82394249476d21691e7c59c9e@%3Cdev.tomcat.apache.org%3E"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/08/26/2"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.apache.org/thread.html/rad5d9f83f0d11fb3f8bb148d179b8a9ad7c6a17f18d70e5805a713d1@%3Cdev.tomcat.apache.org%3E"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20210827-0010/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-16"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20211022-0003/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2022-02"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.gentoo.org/glsa/202209-02"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.gentoo.org/glsa/202210-02"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 9.8,
+                  "versionRange": "[,8.0.27]",
+                  "cve": "CVE-2021-3711",
+                  "cwe": "CWE-120",
+                  "epss": 0.89215
+                },
+                {
+                  "id": "245a56bb-5940-3958-88af-e6d4cd3b8eb1",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certificates present in a certificate chain. It is not set by default. Starting from OpenSSL version 1.1.1h a check to disallow certificates in the chain that have explicitly encoded elliptic curve parameters was added as an additional strict check. An error in the implementation of this check meant that the result of a previous check to confirm that certificates in the chain are valid CA certificates was overwritten. This effectively bypasses the check that non-CA certificates must not be able to issue other certificates. If a \"purpose\" has been configured then there is a subsequent opportunity for checks that the certificate is a valid CA. All of the named \"purpose\" values implemented in libcrypto perform this check. Therefore, where a purpose is set the certificate chain will still be rejected even when the strict flag has been used. A purpose is set by default in libssl client and server certificate verification routines, but it can be overridden or removed by an application. In order to be affected, an application must explicitly set the X509_V_FLAG_X509_STRICT verification flag and either not set a purpose for the certificate verification or, in the case of TLS client or server applications, override the default purpose. OpenSSL versions 1.1.1h and newer are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1h-1.1.1j).",
+                  "severity": "HIGH",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-3450"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-3450"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003d2a40b7bc7b94dd7de897a74571e7024f0cf0d63b"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.openssl.org/news/secadv/20210325.txt"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-2021-GHY28dJd"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20210326-0006/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-21:07.openssl.asc"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/03/27/1"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/03/27/2"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/03/28/3"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/03/28/4"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.gentoo.org/glsa/202103-03"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-05"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CCBFLLVQVILIVGZMBJL3IXZGKWQISYNP/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-08"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://kc.mcafee.com/corporate/index?page\u003dcontent\u0026id\u003dSB10356"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://mta.openssl.org/pipermail/openssl-announce/2021-March/000198.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-09"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44845"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0013"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 7.4,
+                  "versionRange": "[,8.0.23]",
+                  "cve": "CVE-2021-3450",
+                  "cwe": "CWE-295",
+                  "epss": 0.97289
+                },
+                {
+                  "id": "91c4eebd-3b67-3f70-8688-b2b1781a03a7",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "Vulnerability in the MySQL Connectors product of Oracle MySQL (component: Connector/J). Supported versions that are affected are 8.0.19 and prior and 5.1.48 and prior. Difficult to exploit vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise MySQL Connectors. Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in unauthorized update, insert or delete access to some of MySQL Connectors accessible data as well as unauthorized read access to a subset of MySQL Connectors accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of MySQL Connectors. CVSS 3.0 Base Score 5.0 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L).",
+                  "severity": "MEDIUM",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2020-2934"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2020-2934"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.debian.org/debian-lts-announce/2020/06/msg00015.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.debian.org/security/2020/dsa-4703"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4QDR2WOUETBT76WAO5NNCCXSAM3AGG3D/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MDKQVPFT4Z4SFPBH6YNFMJOXKS2YYKHA/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.gentoo.org/glsa/202105-27"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 5.0,
+                  "versionRange": "[,5.1.48]|[8.0.0,8.0.19]",
+                  "cve": "CVE-2020-2934",
+                  "epss": 0.55149
+                },
+                {
+                  "id": "01dbdcb5-5de0-3abf-a3d3-8a18949e9bbe",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "Due to the formatting logic of the \"console.table()\" function it was not safe to allow user controlled input to be passed to the \"properties\" parameter while simultaneously passing a plain object with at least one property as the first parameter, which could be \"__proto__\". The prototype pollution has very limited control, in that it only allows an empty string to be assigned to numerical keys of the object prototype.Node.js \u003e\u003d 12.22.9, \u003e\u003d 14.18.3, \u003e\u003d 16.13.2, and \u003e\u003d 17.3.1 use a null protoype for the object these properties are being assigned to.",
+                  "severity": "HIGH",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2022-21824"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2022-21824"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://hackerone.com/reports/1431042"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://nodejs.org/en/blog/vulnerability/jan-2022-security-releases/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20220325-0007/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.debian.org/security/2022/dsa-5170"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20220729-0004/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00006.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 8.2,
+                  "versionRange": "[,8.0.28]",
+                  "cve": "CVE-2022-21824",
+                  "cwe": "CWE-1321",
+                  "epss": 0.61727
+                },
+                {
+                  "id": "01c3dc79-ba6d-375f-abd4-d928b071feb9",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "Vulnerability in the MySQL Connectors product of Oracle MySQL (component: Connector/J). Supported versions that are affected are 8.0.26 and prior. Difficult to exploit vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Connectors. Successful attacks of this vulnerability can result in unauthorized access to critical data or complete access to all MySQL Connectors accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Connectors. CVSS 3.1 Base Score 5.9 (Confidentiality and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:H).",
+                  "severity": "MEDIUM",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-2471"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-2471"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 5.9,
+                  "versionRange": "[8.0.0,8.0.26]",
+                  "cve": "CVE-2021-2471",
+                  "epss": 0.95773
+                },
+                {
+                  "id": "b4aae8f2-0c15-3bab-9422-0e62d72ec774",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation ClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits the signature_algorithms extension (where it was present in the initial ClientHello), but includes a signature_algorithms_cert extension then a NULL pointer dereference will result, leading to a crash and a denial of service attack. A server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which is the default configuration). OpenSSL TLS clients are not impacted by this issue. All OpenSSL 1.1.1 versions are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1-1.1.1j).",
+                  "severity": "MEDIUM",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-3449"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-3449"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003dfb9fa6b51defd48157eeb207f52181f735d96148"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.openssl.org/news/secadv/20210325.txt"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-2021-GHY28dJd"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.debian.org/security/2021/dsa-4875"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20210326-0006/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-21:07.openssl.asc"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/03/27/1"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/03/27/2"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/03/28/3"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "http://www.openwall.com/lists/oss-security/2021/03/28/4"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.gentoo.org/glsa/202103-03"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-06"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-05"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CCBFLLVQVILIVGZMBJL3IXZGKWQISYNP/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://kc.mcafee.com/corporate/index?page\u003dcontent\u0026id\u003dSB10356"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-09"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20210513-0002/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.tenable.com/security/tns-2021-10"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-772220.pdf"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44845"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0013"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://lists.debian.org/debian-lts-announce/2021/08/msg00029.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 5.9,
+                  "versionRange": "[,8.0.23]",
+                  "cve": "CVE-2021-3449",
+                  "cwe": "CWE-476",
+                  "epss": 0.97825
+                },
+                {
+                  "id": "fbaee26c-f948-3d97-87e6-d5b088cad45d",
+                  "library": {
+                    "name": "mysql:mysql-connector-java",
+                    "language": "java"
+                  },
+                  "description": "Accepting arbitrary Subject Alternative Name (SAN) types, unless a PKI is specifically defined to use a particular SAN type, can result in bypassing name-constrained intermediates. Node.js \u003c 12.22.9, \u003c 14.18.3, \u003c 16.13.2, and \u003c 17.3.1 was accepting URI SAN types, which PKIs are often not defined to use. Additionally, when a protocol allows URI SANs, Node.js did not match the URI correctly.Versions of Node.js with the fix for this disable the URI SAN type when checking a certificate against a hostname. This behavior can be reverted through the --security-revert command-line option.",
+                  "severity": "HIGH",
+                  "links": [
+                    {
+                      "type": "CVE",
+                      "url": "CVE-2021-44531"
+                    },
+                    {
+                      "type": "NVD",
+                      "url": "CVE-2021-44531"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://hackerone.com/reports/1429694"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://nodejs.org/en/blog/vulnerability/jan-2022-security-releases/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://security.netapp.com/advisory/ntap-20220325-0007/"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.debian.org/security/2022/dsa-5170"
+                    },
+                    {
+                      "type": "INFO",
+                      "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+                    }
+                  ],
+                  "type": "SECURITY",
+                  "cvss": 7.4,
+                  "versionRange": "[,8.0.28]",
+                  "cve": "CVE-2021-44531",
+                  "cwe": "CWE-295",
+                  "epss": 0.55149
+                }
+              ],
+              "hierarchy": [
+                "com.meterian.qa.samples:java-sample-failing:1.0",
+                "mysql:mysql-connector-java:8.0.16"
+              ],
+              "locations": [],
+              "safeVersions": {
+                "latestPatch": "8.0.32"
+              },
+              "transitive": false
+            }
+          ]
+        }
+      ]
+    },
+    "stability": {
+      "score": 99,
+      "reports": [
+        {
+          "language": "java",
+          "versions": [
+            {
+              "name": "ch.qos.logback:logback-core",
+              "version": "1.1.11",
+              "latestMinor": "1.4.5",
+              "exclusions": []
+            },
+            {
+              "name": "junit:junit",
+              "version": "3.8.2",
+              "latestMajor": "4.13.2",
+              "exclusions": []
+            },
+            {
+              "name": "mysql:mysql-connector-java",
+              "version": "8.0.16",
+              "latestPatch": "8.0.32",
+              "exclusions": []
+            }
+          ]
+        }
+      ]
+    },
+    "licensing": {
+      "reports": [
+        {
+          "language": "java",
+          "results": [
+            {
+              "name": "ch.qos.logback:logback-core",
+              "version": "1.1.11",
+              "warnings": [],
+              "violations": [],
+              "licenses": [
+                {
+                  "id": "EPL-1.0",
+                  "name": "Eclipse Public License 1.0",
+                  "uri": "https://spdx.org/licenses/EPL-1.0.html",
+                  "wildcard": false
+                },
+                {
+                  "id": "LGPL-2.1",
+                  "name": "GNU Lesser General Public License v2.1 only",
+                  "uri": "https://spdx.org/licenses/LGPL-2.1.html",
+                  "wildcard": false
+                },
+                {
+                  "id": "LGPL-2.0-only",
+                  "name": "GNU Library General Public License v2 only",
+                  "uri": "https://spdx.org/licenses/LGPL-2.0-only.html",
+                  "wildcard": false
+                }
+              ]
+            },
+            {
+              "name": "com.google.protobuf:protobuf-java",
+              "version": "3.6.1",
+              "warnings": [],
+              "violations": [],
+              "licenses": [
+                {
+                  "id": "BSD-3-Clause",
+                  "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+                  "uri": "https://spdx.org/licenses/BSD-3-Clause.html",
+                  "wildcard": false
+                }
+              ]
+            },
+            {
+              "name": "com.meterian.qa.samples:java-sample-failing",
+              "version": "1.0",
+              "warnings": [],
+              "violations": [],
+              "licenses": [
+                {
+                  "id": "BSD",
+                  "name": "BSD License (Generic)",
+                  "uri": "http://www.linfo.org/bsdlicense.html",
+                  "wildcard": true
+                }
+              ]
+            },
+            {
+              "name": "junit:junit",
+              "version": "3.8.2",
+              "warnings": [],
+              "violations": [],
+              "licenses": [
+                {
+                  "id": "CPL-1.0",
+                  "name": "Common Public License 1.0",
+                  "uri": "https://spdx.org/licenses/CPL-1.0.html",
+                  "wildcard": false
+                }
+              ]
+            },
+            {
+              "name": "mysql:mysql-connector-java",
+              "version": "8.0.16",
+              "warnings": [],
+              "violations": [],
+              "licenses": [
+                {
+                  "id": "GPL-2.0-only",
+                  "name": "GNU General Public License v2.0 only",
+                  "uri": "https://spdx.org/licenses/GPL-2.0-only.html",
+                  "wildcard": false
+                }
+              ]
+            }
+          ],
+          "warningsCount": 0,
+          "violationsCount": 0
+        }
+      ],
+      "warningsCount": 0,
+      "violationsCount": 0,
+      "score": 100
+    }
+  },
+  "autofix": {
+    "applied": true,
+    "modestring": "pr",
+    "changes": [
+      {
+        "name": "mysql:mysql-connector-java",
+        "version": "8.0.16",
+        "language": "java",
+        "upgradedTo": "8.0.32",
+        "upgradedAs": "patch",
+        "reason": "security",
+        "live": true,
+        "versions": {
+          "latestPatch": "8.0.32"
+        },
+        "locations": [
+          "/tmp/java-example/pom.xml"
+        ],
+        "advisories": [
+          {
+            "id": "94cf2188-4ce0-36ad-98aa-3e5b2f9f5424",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "Node.js \u003c 12.22.9, \u003c 14.18.3, \u003c 16.13.2, and \u003c 17.3.1 converts SANs (Subject Alternative Names) to a string format. It uses this string to check peer certificates against hostnames when validating connections. The string format was subject to an injection vulnerability when name constraints were used within a certificate chain, allowing the bypass of these name constraints.Versions of Node.js with the fix for this escape SANs containing the problematic characters in order to prevent the injection. This behavior can be reverted through the --security-revert command-line option.",
+            "severity": "MEDIUM",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2021-44532"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2021-44532"
+              },
+              {
+                "type": "INFO",
+                "url": "https://hackerone.com/reports/1429694"
+              },
+              {
+                "type": "INFO",
+                "url": "https://nodejs.org/en/blog/vulnerability/jan-2022-security-releases/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20220325-0007/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.debian.org/security/2022/dsa-5170"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 5.3,
+            "versionRange": "[,8.0.28]",
+            "cve": "CVE-2021-44532",
+            "cwe": "CWE-295",
+            "epss": 0.55149
+          },
+          {
+            "id": "f15cea56-133b-3996-8390-3e45635a0188",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "Server or client applications that call the SSL_check_chain() function during or after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a result of incorrect handling of the \"signature_algorithms_cert\" TLS extension. The crash occurs if an invalid or unrecognised signature algorithm is received from the peer. This could be exploited by a malicious peer in a Denial of Service attack. OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue. This issue did not affect OpenSSL versions prior to 1.1.1d. Fixed in OpenSSL 1.1.1g (Affected 1.1.1d-1.1.1f).",
+            "severity": "HIGH",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2020-1967"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2020-1967"
+              },
+              {
+                "type": "INFO",
+                "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003deb563247aef3e83dda7679c43f9649270462e5b1"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.openssl.org/news/secadv/20200421.txt"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-20:11.openssl.asc"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.debian.org/security/2020/dsa-4661"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2020/04/22/2"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.apache.org/thread.html/r9a41e304992ce6aec6585a87842b4f2e692604f5c892c37e3b0587ee@%3Cdev.tomcat.apache.org%3E"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.apache.org/thread.html/r66ea9c436da150683432db5fbc8beb8ae01886c6459ac30c2cea7345@%3Cdev.tomcat.apache.org%3E"
+              },
+              {
+                "type": "INFO",
+                "url": "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44440"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.apache.org/thread.html/r94d6ac3f010a38fccf4f432b12180a13fa1cf303559bd805648c9064@%3Cdev.tomcat.apache.org%3E"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.gentoo.org/glsa/202004-10"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20200424-0003/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.synology.com/security/advisory/Synology_SA_20_05_OpenSSL"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/XVEP3LAK4JSPRXFO4QF4GG2IVXADV3SO/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2020-03"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/DDHOAATPWJCXRNFMJ2SASDBBNU5RJONY/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://github.com/irsl/CVE-2020-1967"
+              },
+              {
+                "type": "INFO",
+                "url": "http://seclists.org/fulldisclosure/2020/May/5"
+              },
+              {
+                "type": "INFO",
+                "url": "http://packetstormsecurity.com/files/157527/OpenSSL-signature_algorithms_cert-Denial-Of-Service.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/EXDDAOWSAIEFQNBHWYE6PPYFV4QXGMCD/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.synology.com/security/advisory/Synology_SA_20_05"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2020-04"
+              },
+              {
+                "type": "INFO",
+                "url": "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00004.html"
+              },
+              {
+                "type": "INFO",
+                "url": "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00011.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujul2020.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20200717-0004/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuoct2020.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2020-11"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujan2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-10"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 7.5,
+            "versionRange": "[,8.0.20]",
+            "cve": "CVE-2020-1967",
+            "cwe": "CWE-476",
+            "epss": 0.97825
+          },
+          {
+            "id": "fa301494-0e3d-3b5d-b8a9-bfc800243702",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "ASN.1 strings are represented internally within OpenSSL as an ASN1_STRING structure which contains a buffer holding the string data and a field holding the buffer length. This contrasts with normal C strings which are repesented as a buffer for the string data which is terminated with a NUL (0) byte. Although not a strict requirement, ASN.1 strings that are parsed using OpenSSL\u0027s own \"d2i\" functions (and other similar parsing functions) as well as any string whose value has been set with the ASN1_STRING_set() function will additionally NUL terminate the byte array in the ASN1_STRING structure. However, it is possible for applications to directly construct valid ASN1_STRING structures which do not NUL terminate the byte array by directly setting the \"data\" and \"length\" fields in the ASN1_STRING array. This can also happen by using the ASN1_STRING_set0() function. Numerous OpenSSL functions that print ASN.1 data have been found to assume that the ASN1_STRING byte array will be NUL terminated, even though this is not guaranteed for strings that have been directly constructed. Where an application requests an ASN.1 structure to be printed, and where that ASN.1 structure contains ASN1_STRINGs that have been directly constructed by the application without NUL terminating the \"data\" field, then a read buffer overrun can occur. The same thing can also occur during name constraints processing of certificates (for example if a certificate has been directly constructed by the application instead of loading it via the OpenSSL parsing functions, and the certificate contains non NUL terminated ASN1_STRING structures). It can also occur in the X509_get1_email(), X509_REQ_get1_email() and X509_get1_ocsp() functions. If a malicious actor can cause an application to directly construct an ASN1_STRING and then process it through one of the affected OpenSSL functions then this issue could be hit. This might result in a crash (causing a Denial of Service attack). It could also result in the disclosure of private memory contents (such as private keys, or sensitive plaintext). Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k). Fixed in OpenSSL 1.0.2za (Affected 1.0.2-1.0.2y).",
+            "severity": "HIGH",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2021-3712"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2021-3712"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.openssl.org/news/secadv/20210824.txt"
+              },
+              {
+                "type": "INFO",
+                "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003d94d23fcff9b2a7a8368dfe52214d5c2569882c11"
+              },
+              {
+                "type": "INFO",
+                "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003dccb0a11145ee72b042d10593a64eaf9e8a55ec12"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.debian.org/security/2021/dsa-4963"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.apache.org/thread.html/r18995de860f0e63635f3008fd2a6aca82394249476d21691e7c59c9e@%3Cdev.tomcat.apache.org%3E"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/08/26/2"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.apache.org/thread.html/rad5d9f83f0d11fb3f8bb148d179b8a9ad7c6a17f18d70e5805a713d1@%3Cdev.tomcat.apache.org%3E"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20210827-0010/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-16"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.debian.org/debian-lts-announce/2021/09/msg00014.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.debian.org/debian-lts-announce/2021/09/msg00021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://kc.mcafee.com/corporate/index?page\u003dcontent\u0026id\u003dSB10366"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2022-02"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-244969.pdf"
+              },
+              {
+                "type": "INFO",
+                "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.gentoo.org/glsa/202209-02"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.gentoo.org/glsa/202210-02"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 7.4,
+            "versionRange": "[,8.0.27]",
+            "cve": "CVE-2021-3712",
+            "cwe": "CWE-125",
+            "epss": 0.89215
+          },
+          {
+            "id": "9817fe76-c8b0-3dbe-b5ca-890558ae3d1d",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "Node.js \u003c 12.22.9, \u003c 14.18.3, \u003c 16.13.2, and \u003c 17.3.1 did not handle multi-value Relative Distinguished Names correctly. Attackers could craft certificate subjects containing a single-value Relative Distinguished Name that would be interpreted as a multi-value Relative Distinguished Name, for example, in order to inject a Common Name that would allow bypassing the certificate subject verification.Affected versions of Node.js that do not accept multi-value Relative Distinguished Names and are thus not vulnerable to such attacks themselves. However, third-party code that uses node\u0027s ambiguous presentation of certificate subjects may be vulnerable.",
+            "severity": "MEDIUM",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2021-44533"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2021-44533"
+              },
+              {
+                "type": "INFO",
+                "url": "https://hackerone.com/reports/1429694"
+              },
+              {
+                "type": "INFO",
+                "url": "https://nodejs.org/en/blog/vulnerability/jan-2022-security-releases/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20220325-0007/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.debian.org/security/2022/dsa-5170"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 5.3,
+            "versionRange": "[,8.0.28]",
+            "cve": "CVE-2021-44533",
+            "cwe": "CWE-295",
+            "epss": 0.55149
+          },
+          {
+            "id": "d11cae92-ad02-4849-a55b-cae17c37400f",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "Vulnerability in the MySQL Connectors product of Oracle MySQL (component: Connector/J). Supported versions that are affected are 8.0.27 and prior. Difficult to exploit vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Connectors. Successful attacks of this vulnerability can result in takeover of MySQL Connectors. CVSS 3.1 Base Score 6.6 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H).\n",
+            "severity": "MEDIUM",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2022-21363"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 6.6,
+            "versionRange": "[,8.0.28)",
+            "cve": "CVE-2022-21363",
+            "cwe": "CWE-285",
+            "epss": 0.2788
+          },
+          {
+            "id": "bac2c08a-fe25-38e4-b941-3c641594f35f",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "In order to decrypt SM2 encrypted data an application is expected to call the API function EVP_PKEY_decrypt(). Typically an application will call this function twice. The first time, on entry, the \"out\" parameter can be NULL and, on exit, the \"outlen\" parameter is populated with the buffer size required to hold the decrypted plaintext. The application can then allocate a sufficiently sized buffer and call EVP_PKEY_decrypt() again, but this time passing a non-NULL value for the \"out\" parameter. A bug in the implementation of the SM2 decryption code means that the calculation of the buffer size required to hold the plaintext returned by the first call to EVP_PKEY_decrypt() can be smaller than the actual size required by the second call. This can lead to a buffer overflow when EVP_PKEY_decrypt() is called by the application a second time with a buffer that is too small. A malicious attacker who is able present SM2 content for decryption to an application could cause attacker chosen data to overflow the buffer by up to a maximum of 62 bytes altering the contents of other data held after the buffer, possibly changing application behaviour or causing the application to crash. The location of the buffer is application dependent but is typically heap allocated. Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k).",
+            "severity": "CRITICAL",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2021-3711"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2021-3711"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.openssl.org/news/secadv/20210824.txt"
+              },
+              {
+                "type": "INFO",
+                "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003d59f5e75f3bced8fc0e130d72a3f582cf7b480b46"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.debian.org/security/2021/dsa-4963"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.apache.org/thread.html/r18995de860f0e63635f3008fd2a6aca82394249476d21691e7c59c9e@%3Cdev.tomcat.apache.org%3E"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/08/26/2"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.apache.org/thread.html/rad5d9f83f0d11fb3f8bb148d179b8a9ad7c6a17f18d70e5805a713d1@%3Cdev.tomcat.apache.org%3E"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20210827-0010/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-16"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20211022-0003/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2022-02"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.gentoo.org/glsa/202209-02"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.gentoo.org/glsa/202210-02"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 9.8,
+            "versionRange": "[,8.0.27]",
+            "cve": "CVE-2021-3711",
+            "cwe": "CWE-120",
+            "epss": 0.89215
+          },
+          {
+            "id": "245a56bb-5940-3958-88af-e6d4cd3b8eb1",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "The X509_V_FLAG_X509_STRICT flag enables additional security checks of the certificates present in a certificate chain. It is not set by default. Starting from OpenSSL version 1.1.1h a check to disallow certificates in the chain that have explicitly encoded elliptic curve parameters was added as an additional strict check. An error in the implementation of this check meant that the result of a previous check to confirm that certificates in the chain are valid CA certificates was overwritten. This effectively bypasses the check that non-CA certificates must not be able to issue other certificates. If a \"purpose\" has been configured then there is a subsequent opportunity for checks that the certificate is a valid CA. All of the named \"purpose\" values implemented in libcrypto perform this check. Therefore, where a purpose is set the certificate chain will still be rejected even when the strict flag has been used. A purpose is set by default in libssl client and server certificate verification routines, but it can be overridden or removed by an application. In order to be affected, an application must explicitly set the X509_V_FLAG_X509_STRICT verification flag and either not set a purpose for the certificate verification or, in the case of TLS client or server applications, override the default purpose. OpenSSL versions 1.1.1h and newer are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1h-1.1.1j).",
+            "severity": "HIGH",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2021-3450"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2021-3450"
+              },
+              {
+                "type": "INFO",
+                "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003d2a40b7bc7b94dd7de897a74571e7024f0cf0d63b"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.openssl.org/news/secadv/20210325.txt"
+              },
+              {
+                "type": "INFO",
+                "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-2021-GHY28dJd"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20210326-0006/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-21:07.openssl.asc"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/03/27/1"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/03/27/2"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/03/28/3"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/03/28/4"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.gentoo.org/glsa/202103-03"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-05"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CCBFLLVQVILIVGZMBJL3IXZGKWQISYNP/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-08"
+              },
+              {
+                "type": "INFO",
+                "url": "https://kc.mcafee.com/corporate/index?page\u003dcontent\u0026id\u003dSB10356"
+              },
+              {
+                "type": "INFO",
+                "url": "https://mta.openssl.org/pipermail/openssl-announce/2021-March/000198.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-09"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44845"
+              },
+              {
+                "type": "INFO",
+                "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0013"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 7.4,
+            "versionRange": "[,8.0.23]",
+            "cve": "CVE-2021-3450",
+            "cwe": "CWE-295",
+            "epss": 0.97289
+          },
+          {
+            "id": "91c4eebd-3b67-3f70-8688-b2b1781a03a7",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "Vulnerability in the MySQL Connectors product of Oracle MySQL (component: Connector/J). Supported versions that are affected are 8.0.19 and prior and 5.1.48 and prior. Difficult to exploit vulnerability allows unauthenticated attacker with network access via multiple protocols to compromise MySQL Connectors. Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in unauthorized update, insert or delete access to some of MySQL Connectors accessible data as well as unauthorized read access to a subset of MySQL Connectors accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of MySQL Connectors. CVSS 3.0 Base Score 5.0 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L).",
+            "severity": "MEDIUM",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2020-2934"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2020-2934"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2020.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.debian.org/debian-lts-announce/2020/06/msg00015.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.debian.org/security/2020/dsa-4703"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4QDR2WOUETBT76WAO5NNCCXSAM3AGG3D/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/MDKQVPFT4Z4SFPBH6YNFMJOXKS2YYKHA/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.gentoo.org/glsa/202105-27"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 5.0,
+            "versionRange": "[,5.1.48]|[8.0.0,8.0.19]",
+            "cve": "CVE-2020-2934",
+            "epss": 0.55149
+          },
+          {
+            "id": "01dbdcb5-5de0-3abf-a3d3-8a18949e9bbe",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "Due to the formatting logic of the \"console.table()\" function it was not safe to allow user controlled input to be passed to the \"properties\" parameter while simultaneously passing a plain object with at least one property as the first parameter, which could be \"__proto__\". The prototype pollution has very limited control, in that it only allows an empty string to be assigned to numerical keys of the object prototype.Node.js \u003e\u003d 12.22.9, \u003e\u003d 14.18.3, \u003e\u003d 16.13.2, and \u003e\u003d 17.3.1 use a null protoype for the object these properties are being assigned to.",
+            "severity": "HIGH",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2022-21824"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2022-21824"
+              },
+              {
+                "type": "INFO",
+                "url": "https://hackerone.com/reports/1431042"
+              },
+              {
+                "type": "INFO",
+                "url": "https://nodejs.org/en/blog/vulnerability/jan-2022-security-releases/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20220325-0007/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.debian.org/security/2022/dsa-5170"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20220729-0004/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.debian.org/debian-lts-announce/2022/10/msg00006.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 8.2,
+            "versionRange": "[,8.0.28]",
+            "cve": "CVE-2022-21824",
+            "cwe": "CWE-1321",
+            "epss": 0.61727
+          },
+          {
+            "id": "01c3dc79-ba6d-375f-abd4-d928b071feb9",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "Vulnerability in the MySQL Connectors product of Oracle MySQL (component: Connector/J). Supported versions that are affected are 8.0.26 and prior. Difficult to exploit vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Connectors. Successful attacks of this vulnerability can result in unauthorized access to critical data or complete access to all MySQL Connectors accessible data and unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Connectors. CVSS 3.1 Base Score 5.9 (Confidentiality and Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:H).",
+            "severity": "MEDIUM",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2021-2471"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2021-2471"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 5.9,
+            "versionRange": "[8.0.0,8.0.26]",
+            "cve": "CVE-2021-2471",
+            "epss": 0.95773
+          },
+          {
+            "id": "b4aae8f2-0c15-3bab-9422-0e62d72ec774",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation ClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits the signature_algorithms extension (where it was present in the initial ClientHello), but includes a signature_algorithms_cert extension then a NULL pointer dereference will result, leading to a crash and a denial of service attack. A server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which is the default configuration). OpenSSL TLS clients are not impacted by this issue. All OpenSSL 1.1.1 versions are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1-1.1.1j).",
+            "severity": "MEDIUM",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2021-3449"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2021-3449"
+              },
+              {
+                "type": "INFO",
+                "url": "https://git.openssl.org/gitweb/?p\u003dopenssl.git;a\u003dcommitdiff;h\u003dfb9fa6b51defd48157eeb207f52181f735d96148"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.openssl.org/news/secadv/20210325.txt"
+              },
+              {
+                "type": "INFO",
+                "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-2021-GHY28dJd"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.debian.org/security/2021/dsa-4875"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20210326-0006/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.FreeBSD.org/advisories/FreeBSD-SA-21:07.openssl.asc"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/03/27/1"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/03/27/2"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/03/28/3"
+              },
+              {
+                "type": "INFO",
+                "url": "http://www.openwall.com/lists/oss-security/2021/03/28/4"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.gentoo.org/glsa/202103-03"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-06"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-05"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/CCBFLLVQVILIVGZMBJL3IXZGKWQISYNP/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://kc.mcafee.com/corporate/index?page\u003dcontent\u0026id\u003dSB10356"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-09"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20210513-0002/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.tenable.com/security/tns-2021-10"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuApr2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-772220.pdf"
+              },
+              {
+                "type": "INFO",
+                "url": "https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44845"
+              },
+              {
+                "type": "INFO",
+                "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0013"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com//security-alerts/cpujul2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://lists.debian.org/debian-lts-announce/2021/08/msg00029.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuoct2021.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-389290.pdf"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 5.9,
+            "versionRange": "[,8.0.23]",
+            "cve": "CVE-2021-3449",
+            "cwe": "CWE-476",
+            "epss": 0.97825
+          },
+          {
+            "id": "fbaee26c-f948-3d97-87e6-d5b088cad45d",
+            "library": {
+              "name": "mysql:mysql-connector-java",
+              "language": "java"
+            },
+            "description": "Accepting arbitrary Subject Alternative Name (SAN) types, unless a PKI is specifically defined to use a particular SAN type, can result in bypassing name-constrained intermediates. Node.js \u003c 12.22.9, \u003c 14.18.3, \u003c 16.13.2, and \u003c 17.3.1 was accepting URI SAN types, which PKIs are often not defined to use. Additionally, when a protocol allows URI SANs, Node.js did not match the URI correctly.Versions of Node.js with the fix for this disable the URI SAN type when checking a certificate against a hostname. This behavior can be reverted through the --security-revert command-line option.",
+            "severity": "HIGH",
+            "links": [
+              {
+                "type": "CVE",
+                "url": "CVE-2021-44531"
+              },
+              {
+                "type": "NVD",
+                "url": "CVE-2021-44531"
+              },
+              {
+                "type": "INFO",
+                "url": "https://hackerone.com/reports/1429694"
+              },
+              {
+                "type": "INFO",
+                "url": "https://nodejs.org/en/blog/vulnerability/jan-2022-security-releases/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://security.netapp.com/advisory/ntap-20220325-0007/"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.debian.org/security/2022/dsa-5170"
+              },
+              {
+                "type": "INFO",
+                "url": "https://www.oracle.com/security-alerts/cpujul2022.html"
+              }
+            ],
+            "type": "SECURITY",
+            "cvss": 7.4,
+            "versionRange": "[,8.0.28]",
+            "cve": "CVE-2021-44531",
+            "cwe": "CWE-295",
+            "epss": 0.55149
+          }
+        ]
+      }
+    ]
+  }
+}
